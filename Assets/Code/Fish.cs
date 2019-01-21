@@ -17,5 +17,10 @@ public class Fish : MonoBehaviour
             rigidbody.velocity = Vector3.zero;
             rigidbody.AddForce(Vector3.up * _upwardForceMultiplier);
         }
+
+        if (transform.position.y > 6f || transform.position.y < -6f)
+        {
+            Application.LoadLevel(0);
+        }
     }
 }
